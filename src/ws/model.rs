@@ -64,10 +64,10 @@ pub enum Data {
 #[derive(Copy, Clone, Debug, Deserialize, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Ticker {
-    pub bid: Decimal,
-    pub ask: Decimal,
-    pub bid_size: Decimal,
-    pub ask_size: Decimal,
+    pub bid: Option<Decimal>,
+    pub ask: Option<Decimal>,
+    pub bid_size: Option<Decimal>,
+    pub ask_size: Option<Decimal>,
     pub last: Decimal,
     #[serde_as(as = "TimestampSecondsWithFrac<f64>")]
     pub time: DateTime<Utc>,

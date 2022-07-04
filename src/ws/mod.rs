@@ -164,7 +164,7 @@ impl Ws {
                 .await?;
 
             // Confirmation should arrive within the next 100 updates
-            for _ in 0..100 {
+            for _ in 0..1000 {
                 let response = self.next_response().await?;
                 match response {
                     Response {
